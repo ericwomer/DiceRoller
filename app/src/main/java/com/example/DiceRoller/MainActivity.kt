@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.content.Context
 import android.widget.Toast
+import android.widget.Button
 // import com.example.DiceRoller.databinding.ActivityMainBinding
 import com.example.DiceRoller.R
 import com.itsaky.androidide.logsender.LogSender
@@ -17,6 +18,10 @@ public class MainActivity : AppCompatActivity() {
         // Remove this line if you don't want AndroidIDE to show this app's logs
         LogSender.startLogging(this@MainActivity)
         super.onCreate(savedInstanceState)
+        
+        setContentView(R.layout.activity_main)
+        val rollButton : Button = findViewById(R.id.roll_button)
+        rollButton.text="Let's Roll"
         // Inflate and get instance of binding
         // binding = ActivityMainBinding.inflate(layoutInflater)
         
