@@ -11,11 +11,8 @@ import android.widget.Toast
 import android.widget.Button
 
 // project specific imports
-import com.example.DiceRoller.databinding.ActivityMainBinding
-import com.example.DiceRoller.R
-
-// ide specific import
-import com.itsaky.androidide.logsender.LogSender
+import com.example.diceroller.databinding.ActivityMainBinding
+import com.example.diceroller.R
 
 public class MainActivity : AppCompatActivity() {
     
@@ -37,7 +34,6 @@ public class MainActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         // Remove this line if you don't want AndroidIDE to show this app's logs
-        LogSender.startLogging(this@MainActivity)
         super.onCreate(savedInstanceState)
         
         // setContentView(R.layout.activity_main)
@@ -52,16 +48,7 @@ public class MainActivity : AppCompatActivity() {
         
         binding.rollButton.text = "Let's Roll"
         binding.rollButton.setOnClickListener {
-        	// Toast.makeText(this@MainActivity, "Button Clicked", Toast.LENGTH_SHORT).show()
         	rollDice()
         }
-        
-        // Setup toolbar
-        // setSupportActionBar(binding.toolbar)
-        
-        // Use lambdas
-        // binding.fab.setOnClickListener {
-        //     Toast.makeText(this@MainActivity, "Replace with your action", Toast.LENGTH_SHORT).show()
-        // }
     }
 }
