@@ -1,18 +1,14 @@
-package com.example.diceroller
+package com.ewomer.diceroller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.content.Context
 import java.util.*
 
 // widgets
-import android.widget.Toast
-import android.widget.Button
 
 // project specific imports
-import com.example.diceroller.databinding.ActivityMainBinding
-import com.example.diceroller.R
+import com.ewomer.diceroller.databinding.ActivityMainBinding
+import com.ewomer.diceroller.R
 
 // ide specific import
 // import com.itsaky.androidide.logsender.LogSender

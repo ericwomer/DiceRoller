@@ -1,12 +1,12 @@
-package com.example.DiceRoller
+package com.ewomer.DiceRoller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.*
 
 // project specific imports
-import com.example.diceroller.databinding.ActivityMainBinding
-import com.example.diceroller.R
+import com.ewomer.diceroller.databinding.ActivityMainBinding
+import com.ewomer.diceroller.R
 
 class MainActivity : AppCompatActivity() {
     
