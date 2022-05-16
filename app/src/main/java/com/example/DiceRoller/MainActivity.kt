@@ -2,19 +2,13 @@ package com.example.DiceRoller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.content.Context
 import java.util.*
-
-// widgets
-import android.widget.Toast
-import android.widget.Button
 
 // project specific imports
 import com.example.diceroller.databinding.ActivityMainBinding
 import com.example.diceroller.R
 
-public class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityMainBinding
     
@@ -33,21 +27,17 @@ public class MainActivity : AppCompatActivity() {
     }
     
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Remove this line if you don't want AndroidIDE to show this app's logs
         super.onCreate(savedInstanceState)
-        
-        // setContentView(R.layout.activity_main)
-        // val rollButton : Button = findViewById(R.id.roll_button)
-        // rollButton.text="Let's Roll"
-        // Inflate and get instance of binding
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         
         // set content view to binding's root
         val view = binding.root
         setContentView(view)
-        
-        binding.rollButton.text = "Let's Roll"
-        binding.rollButton.setOnClickListener {
+
+        val rollButton = binding.rollButton
+        rollButton.text = "Let's Roll"
+        rollButton.setOnClickListener {
         	rollDice()
         }
     }
