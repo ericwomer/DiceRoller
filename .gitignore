@@ -86,3 +86,6 @@ lint/tmp/
 
 # git merge/rebase files
 *.orig
+
+# Custom ignores
+.trahsed-*
