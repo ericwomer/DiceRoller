@@ -4,6 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.*
 
+import android.widget.Button
+
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+
+
 // widgets
 
 // project specific imports
@@ -36,9 +43,9 @@ public class MainActivity : AppCompatActivity() {
         // LogSender.startLogging(this@MainActivity)
         super.onCreate(savedInstanceState)
 
-        // setContentView(R.layout.activity_main)
-        // val rollButton : Button = findViewById(R.id.roll_button)
-        // rollButton.text="Let's Roll"
+        setContentView(R.layout.activity_main)
+        val rollButton : Button = findViewById(R.id.roll_button)
+        rollButton.text="Let's Roll"
         // Inflate and get instance of binding
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -60,4 +67,8 @@ public class MainActivity : AppCompatActivity() {
         //     Toast.makeText(this@MainActivity, "Replace with your action", Toast.LENGTH_SHORT).show()
         // }
     }
+    
+    @Composable
+    fun doCompose() {
+        } 
 }
