@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
-
+import androidx.compose.material.Text
 
 // widgets
 
@@ -22,7 +22,7 @@ import com.ewomer.diceroller.R
 
 public class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    // private lateinit var binding: ActivityMainBinding
 
     fun rollDice() {
         var randomInt = Random().nextInt(6) + 1
@@ -35,7 +35,7 @@ public class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
-        binding.diceImage.setImageResource(drawableResource)
+        // binding.diceImage.setImageResource(drawableResource)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,10 +43,12 @@ public class MainActivity : AppCompatActivity() {
         // LogSender.startLogging(this@MainActivity)
         super.onCreate(savedInstanceState)
 
+        setContent { MessageCard("Success!") }
+        /*
         setContentView(R.layout.activity_main)
         val rollButton : Button = findViewById(R.id.roll_button)
         rollButton.text="Let's Roll"
-        // Inflate and get instance of binding
+        Inflate and get instance of binding
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         // set content view to binding's root
@@ -59,16 +61,14 @@ public class MainActivity : AppCompatActivity() {
             rollDice()
         }
 
+        
         // Setup toolbar
         // setSupportActionBar(binding.toolbar)
-
-        // Use lambdas
-        // binding.fab.setOnClickListener {
-        //     Toast.makeText(this@MainActivity, "Replace with your action", Toast.LENGTH_SHORT).show()
-        // }
+        */
     }
     
     @Composable
-    fun doCompose() {
+    fun MessageCard(msg: String) {
+                Text(text = "Success!")
         } 
 }
