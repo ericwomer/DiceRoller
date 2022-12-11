@@ -4,17 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.*
 
-import android.widget.Button
-
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.material.Text
+import androidx.compose.ui.tooling.preview.Preview
 
 // widgets
 
 // project specific imports
-import com.ewomer.diceroller.databinding.ActivityMainBinding
 import com.ewomer.diceroller.R
 
 // ide specific import
@@ -69,6 +66,12 @@ public class MainActivity : AppCompatActivity() {
     
     @Composable
     fun MessageCard(msg: String) {
-                Text(text = "Success!")
-        } 
+                Text(text = msg)
+        }
+
+    @Preview
+    @Composable
+    fun DiceRollerPreview() {
+        MessageCard(msg = "Success Again!")
+    }
 }
