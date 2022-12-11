@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DiceRoller"
-include ':app'
+include(":app")
