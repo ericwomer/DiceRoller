@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.ewomer.diceroller"
-        minSdk  = 22
-        targetSdk = 32
+        minSdk  = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -38,7 +38,7 @@ android {
     }
    
     namespace = "com.ewomer.diceroller"
-    buildToolsVersion = "33.0.0"
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
