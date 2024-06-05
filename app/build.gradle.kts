@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -19,10 +20,7 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.1"
-    }
-    
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -48,7 +46,6 @@ dependencies {
     implementation (libs.google.android.material)
     implementation (libs.androidx.constraintlayout)
 
-    implementation (libs.androidx.compose.compiler)
     implementation (libs.androidx.compose.ui.tooling)
     implementation (libs.androidx.compose.ui.tooling.preview)
     implementation (libs.androidx.compose.material)
